@@ -1,75 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
-<!DOCTYPE html>
 <html>
 <head>
   <title>Grade Checking App</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #bfb4b4;
-    }
-
-    h1 {
-      color: #333;
-    }
-
-    #gradeForm {
-      margin: 20px;
-      padding: 20px;
-      background-color: #f7dfdf;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      border-radius: 5px;
-      max-width: 300px;
-      margin: 0 auto;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    input[type="text"] {
-      width: 100%;
-      padding: 5px;
-      margin-bottom: 10px;
-      border: 1px solid #978888;
-      border-radius: 3px;
-    }
-
-    button {
-      background-color: #007bff;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #0056b3;
-    }
-
-    #gradeResult {
-      font-weight: bold;
-      margin: 20px;
-      padding: 10px;
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      border-radius: 5px;
-    }
-  </style>
-</head>
+  <link rel="stylesheet" href="./styles.css">
 <body>
   <h1>Grade Checking App</h1>
   <form id="gradeForm">
@@ -78,27 +11,6 @@
     <button type="submit">Check Grade</button>
   </form>
   <p id="gradeResult"></p>
-
-  <script>
-    document.getElementById('gradeForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-      const percentInput = parseFloat(document.getElementById('percentInput').value);
-
-      var gradeResult = 'Grade: ';
-
-      if (percentInput >= 80)
-        gradeResult += 'A+';
-      else if (percentInput >= 70)
-        gradeResult += 'A';
-      else if (percentInput >= 60)
-        gradeResult += 'B';
-      else if (percentInput >= 50)
-        gradeResult += 'C';
-      else
-        gradeResult += 'F';
-
-      document.getElementById('gradeResult').textContent = gradeResult;
-    });
-  </script>
+  <script src="./scripts.mjs"></script>
 </body>
 </html>
